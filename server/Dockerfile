@@ -1,12 +1,12 @@
 FROM node:12
 
-WORKDIR /express-server
+WORKDIR /server
 
-COPY package*.json /express-server
+COPY package*.json /server
 
 RUN npm install
 
-COPY . /express-server/
+COPY . /server/
 
 EXPOSE 3080
 

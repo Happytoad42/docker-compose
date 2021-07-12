@@ -4,12 +4,12 @@ const express = require('express');
 
 // Constants
 const PORT = 8080;
-const HOST = '0.0.0.0';
+const HOST = 'localhost';
 
 // App
 const app = express();
 app.get('/', (req, res) => {
-    res.json({ userName: 'Happytoad' })
+    res.json({ username: 'Happytoad' })
 });
 
 app.listen(PORT, HOST);
