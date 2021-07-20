@@ -18,7 +18,7 @@ export default function Home(props) {
 
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:8080');
+  const res = await fetch('server:3080');
   console.log(res);
   const data = await res.json()
   return {

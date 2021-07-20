@@ -1,22 +1,18 @@
 services:
-  express-server:
+  server:
     build:
-      context: ./express-server
+      context: ./server
     ports:
       - "3080:3080"
-    container_name: express-server
     volumes:
-      - ./express-server:/express-server
-      - /express-server/node_modules
-  next-app:
+      - ./server:/server
+      - /server/node_modules
+  client:
     build:
-      context: ./next-app
+      context: ./client
     ports:
       - "3000:3000"
-    container_name: next-app
     stdin_open: true
     volumes:
-      - ./next-app:/next-app
-      - /next-app/node_modules
-    depends_on:
-      - express-server
+      - ./client:/client
+      - /client/node_modules
